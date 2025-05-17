@@ -1,10 +1,7 @@
 package com.orderly.votybe.items;
 
-import com.orderly.votybe.categories.Category;
-
 public class ItemMapper {
-
-    public static Item toEntity(ItemDto dto, Category category) {
+    public static Item toEntity(ItemDto dto) {
         return Item.builder()
                 .id(dto.getItemId())
                 .name(dto.getName())
@@ -17,7 +14,6 @@ public class ItemMapper {
                 .glutenFree(dto.isGlutenFree())
                 .spicy(dto.isSpicy())
                 .isNew(dto.isNew())
-                .category(category)
                 .build();
     }
 
