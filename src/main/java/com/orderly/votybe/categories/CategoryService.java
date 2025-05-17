@@ -13,7 +13,7 @@ public class CategoryService {
 
     public List<Category> createCategories(List<CategoryDto> categoryDtos, Menu menu) {
         List<Category> categories = categoryDtos.stream()
-                .map(dto -> CategoryMapper.toEntity(dto, menu))
+                .map(CategoryMapper::toEntity)
                 .collect(Collectors.toList());
 
         categories.forEach(category -> category.setMenu(menu));
