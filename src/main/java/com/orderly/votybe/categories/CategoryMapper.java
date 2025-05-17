@@ -1,15 +1,15 @@
 package com.orderly.votybe.categories;
 
-
-import com.orderly.votybe.menus.Menu;
+import com.orderly.votybe.menus.MenuDto;
+import com.orderly.votybe.menus.MenuMapper;
 
 public class CategoryMapper {
-    public static Category toEntity(CategoryDto categoryDto, Menu menu) {
+    public static Category toEntity(CategoryDto categoryDto, MenuDto menuDto) {
         return Category.builder()
                 .id(categoryDto.getCategoryId())
                 .name(categoryDto.getName())
                 .icon(categoryDto.getIcon())
-                .menu(menu)
+                .menu(menuDto != null ? MenuMapper.toEntity(menuDto) : null)
                 .build();
     }
 
@@ -20,5 +20,13 @@ public class CategoryMapper {
                 .icon(category.getIcon())
                 .menuId(category.getMenu() != null ? category.getMenu().getId() : null)
                 .build();
+    }
+
+    public static Category toEntity(CategoryDto categoryDto) {
+        return Category.builder()
+                .id(categoryDto.getCategoryId())
+                .name(categoryDto.getName())
+                .icon(categoryDto.getIcon())
+                .build(); // Sans menu
     }
 }

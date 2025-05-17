@@ -12,6 +12,7 @@ import jakarta.validation.constraints.*;
 @Data
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class MenuDto {
 
     private UUID menuId;

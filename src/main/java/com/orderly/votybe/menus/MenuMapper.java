@@ -14,4 +14,10 @@ public class MenuMapper {
                 .categories(categories)
                 .build();
     }
+
+    public static Menu toEntity(MenuDto menuDto) {
+        return Menu.builder()
+                .id(menuDto.getMenuId())
+                .build();
+    }
 }

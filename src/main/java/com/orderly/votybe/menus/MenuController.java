@@ -1,5 +1,6 @@
 package com.orderly.votybe.menus;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +17,7 @@ public class MenuController {
     private final MenuService menuService;
 
     @PostMapping
-    public ResponseEntity<MenuDto> createMenu(@RequestBody MenuDto menuDto) {
+    public ResponseEntity<MenuDto> createMenu(@Valid @RequestBody MenuDto menuDto) {
         MenuDto createdMenu = menuService.createMenu(menuDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdMenu);
     }
