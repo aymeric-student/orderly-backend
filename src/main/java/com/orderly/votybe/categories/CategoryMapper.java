@@ -18,7 +18,7 @@ public class CategoryMapper {
                 .categoryId(category.getId())
                 .name(category.getName())
                 .icon(category.getIcon())
-                .menuId(category.getMenu() != null ? category.getMenu().getId().toString() : null)
+                .menuId(category.getMenu() != null ? category.getMenu().getId() : null)
                 .build();
     }
 }
