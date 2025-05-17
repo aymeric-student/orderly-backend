@@ -1,0 +1,26 @@
+# application-dev.yaml
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/restaurant_db
+    username: postgres
+    password: postgres
+    hikari:
+      maximum-pool-size: 5
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  secret: ${JWT_SECRET:mySecretKeyForOrderlyApplicationThatIsAtLeast256BitsLong}
+
+logging:
+  level:
+    com.orderly.votybe: DEBUG
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+
+orderly:
+  cors:
+    allowed-origins: "http://localhost:5173,http://localhost:3000"

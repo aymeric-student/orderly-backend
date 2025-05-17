@@ -1,6 +1,7 @@
-package com.orderly.votybe.users;
+package com.orderly.votybe.core.security;
 
 import com.orderly.votybe.core.exceptions.errors.UnauthorizedException;
+import com.orderly.votybe.users.JwtAuthenticationFilter;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

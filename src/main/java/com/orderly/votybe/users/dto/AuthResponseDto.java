@@ -1,4 +1,4 @@
-package com.orderly.votybe.users;
+package com.orderly.votybe.users.dto;
 
 import lombok.*;
 import java.util.UUID;

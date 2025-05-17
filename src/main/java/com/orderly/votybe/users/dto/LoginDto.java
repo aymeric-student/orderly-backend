@@ -1,4 +1,4 @@
-package com.orderly.votybe.users;
+package com.orderly.votybe.users.dto;
 
 import jakarta.validation.constraints.*;
 import lombok.*;
