@@ -9,7 +9,7 @@ import java.util.UUID;
 @Data
 @Builder
 public class ItemDto {
-    private UUID id;
+    private UUID itemId;
     private String name;
     private String description;
     private List<String> ingredients;

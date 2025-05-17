@@ -6,7 +6,7 @@ import com.orderly.votybe.menus.Menu;
 public class CategoryMapper {
     public static Category toEntity(CategoryDto categoryDto, Menu menu) {
         return Category.builder()
-                .id(categoryDto.getId())
+                .id(categoryDto.getCategoryId())
                 .name(categoryDto.getName())
                 .icon(categoryDto.getIcon())
                 .menu(menu)
@@ -15,7 +15,7 @@ public class CategoryMapper {
 
     public static CategoryDto toDto(Category category) {
         return CategoryDto.builder()
-                .id(category.getId())
+                .categoryId(category.getId())
                 .name(category.getName())
                 .icon(category.getIcon())
                 .menuId(category.getMenu() != null ? category.getMenu().getId().toString() : null)

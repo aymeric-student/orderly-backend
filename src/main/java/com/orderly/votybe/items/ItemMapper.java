@@ -6,7 +6,7 @@ public class ItemMapper {
 
     public static Item toEntity(ItemDto dto, Category category) {
         return Item.builder()
-                .id(dto.getId())
+                .id(dto.getItemId())
                 .name(dto.getName())
                 .description(dto.getDescription())
                 .ingredients(dto.getIngredients())
@@ -23,7 +23,7 @@ public class ItemMapper {
 
     public static ItemDto toDto(Item item) {
         return ItemDto.builder()
-                .id(item.getId())
+                .itemId(item.getId())
                 .name(item.getName())
                 .description(item.getDescription())
                 .ingredients(item.getIngredients())

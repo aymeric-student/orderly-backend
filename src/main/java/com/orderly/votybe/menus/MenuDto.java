@@ -13,7 +13,7 @@ import java.util.UUID;
 @Builder
 @NoArgsConstructor
 public class MenuDto {
-    private UUID id;
+    private UUID menuId;
     private UUID restaurantId;
     private List<CategoryDto> categories;
 }

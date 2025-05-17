@@ -31,7 +31,7 @@ public class MenuService {
         Menu savedMenu = menuRepository.save(menu);
 
         return MenuDto.builder()
-                .id(savedMenu.getId())
+                .menuId(savedMenu.getId())
                 .restaurantId(savedMenu.getRestaurant().getId())
                 .categories(categoryService.convertToDtos(savedMenu.getCategories()))
                 .build();
@@ -42,7 +42,7 @@ public class MenuService {
                 .orElseThrow(() -> new RuntimeException("Menu not found with id: " + menuId));
 
         return MenuDto.builder()
-                .id(menu.getId())
+                .menuId(menu.getId())
                 .restaurantId(menu.getRestaurant().getId())
                 .categories(categoryService.convertToDtos(menu.getCategories()))
                 .build();
@@ -51,7 +51,7 @@ public class MenuService {
     public List<MenuDto> getAllMenus() {
         return menuRepository.findAll().stream()
                 .map(menu -> MenuDto.builder()
-                        .id(menu.getId())
+                        .menuId(menu.getId())
                         .restaurantId(menu.getRestaurant().getId())
                         .categories(categoryService.convertToDtos(menu.getCategories()))
                         .build())

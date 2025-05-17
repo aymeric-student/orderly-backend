@@ -11,7 +11,7 @@ import java.util.UUID;
 @Getter
 @Setter
 public class CategoryDto {
-    private UUID id;
+    private UUID categoryId;
     private String name;
     private String icon;
     private String menuId;

@@ -1,41 +1,22 @@
 package com.orderly.votybe.settings;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
-@Entity
-@Table(name = "settings")
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
-public class Settings {
-
-    @Id
-    @GeneratedValue
-    @Column(columnDefinition = "uuid", updatable = false, nullable = false)
-    private UUID id;
-
+public class SettingsDto {
+    private UUID settingsId;
     private boolean enableOnlineOrdering;
-
     private boolean onSite;
-
     private boolean takeAway;
-
     private boolean delivery;
-
     private int minOrderAmount;
-
     private String openingTime;
-
     private String closingTime;
-
     private String orderMode;
-
     private String prepTime;
+    private UUID restaurantId;
 }
