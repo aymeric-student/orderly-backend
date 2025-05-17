@@ -1,7 +1,7 @@
-package com.orderly.votybe.exceptions;
+package com.orderly.votybe.core.exceptions;
 
-import com.orderly.votybe.exceptions.models.ApiErrorResponse;
-import com.orderly.votybe.exceptions.models.ValidationErrorDetail;
+import com.orderly.votybe.core.exceptions.models.ApiErrorResponse;
+import com.orderly.votybe.core.exceptions.models.ValidationErrorDetail;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;

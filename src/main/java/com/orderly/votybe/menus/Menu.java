@@ -1,12 +1,10 @@
 package com.orderly.votybe.menus;
 
 import com.orderly.votybe.categories.Category;
+import com.orderly.votybe.core.BaseEntity;
 import com.orderly.votybe.restaurants.Restaurant;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,11 +12,12 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "menus")
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Menu {
+@Getter
+@Setter
+public class Menu extends BaseEntity {
 
     @Id
     @GeneratedValue

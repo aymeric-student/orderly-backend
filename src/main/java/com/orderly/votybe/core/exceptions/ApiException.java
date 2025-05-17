@@ -1,4 +1,4 @@
-package com.orderly.votybe.exceptions;
+package com.orderly.votybe.core.exceptions;
 
 import lombok.Getter;
 import org.springframework.http.HttpStatus;

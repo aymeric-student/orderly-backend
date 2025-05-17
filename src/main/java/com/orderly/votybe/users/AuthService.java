@@ -1,8 +1,8 @@
 package com.orderly.votybe.users;
 
-import com.orderly.votybe.exceptions.errors.BadRequestException;
-import com.orderly.votybe.exceptions.errors.NotFoundException;
-import com.orderly.votybe.exceptions.errors.UnauthorizedException;
+import com.orderly.votybe.core.exceptions.errors.BadRequestException;
+import com.orderly.votybe.core.exceptions.errors.NotFoundException;
+import com.orderly.votybe.core.exceptions.errors.UnauthorizedException;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

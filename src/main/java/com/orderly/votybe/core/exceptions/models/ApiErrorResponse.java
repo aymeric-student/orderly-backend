@@ -1,4 +1,4 @@
-package com.orderly.votybe.exceptions.models;
+package com.orderly.votybe.core.exceptions.models;
 
 import lombok.Builder;
 import lombok.Data;

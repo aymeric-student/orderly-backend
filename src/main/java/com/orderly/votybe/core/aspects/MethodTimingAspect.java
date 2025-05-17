@@ -1,4 +1,4 @@
-package com.orderly.votybe.aspects;
+package com.orderly.votybe.core.aspects;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

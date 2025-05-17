@@ -1,20 +1,19 @@
 package com.orderly.votybe.users;
 
+import com.orderly.votybe.core.BaseEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
 @Table(name = "users")
-@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+@Getter
+@Setter
+public class User extends BaseEntity {
 
     @Id
     @GeneratedValue

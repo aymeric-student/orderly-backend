@@ -1,19 +1,20 @@
 package com.orderly.votybe.teams;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
+import com.orderly.votybe.core.BaseEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Entity
 @Table(name = "team")
-public class Team {
+@Getter
+@Setter
+public class Team extends BaseEntity {
 
     @Id
     @GeneratedValue

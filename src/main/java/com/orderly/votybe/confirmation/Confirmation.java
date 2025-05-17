@@ -1,21 +1,21 @@
 package com.orderly.votybe.confirmation;
 
 
+import com.fasterxml.jackson.databind.ser.Serializers;
+import com.orderly.votybe.core.BaseEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
-@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "confirmation")
-public class Confirmation {
+@Getter
+@Setter
+public class Confirmation extends BaseEntity {
 
     @Id
     @GeneratedValue

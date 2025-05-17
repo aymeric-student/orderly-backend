@@ -1,6 +1,8 @@
 package com.orderly.votybe.items;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
 import com.orderly.votybe.categories.Category;
+import com.orderly.votybe.core.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,11 +11,12 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "menu_items")
-@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Item {
+@Getter
+@Setter
+public class Item extends BaseEntity {
 
     @Id
     @GeneratedValue

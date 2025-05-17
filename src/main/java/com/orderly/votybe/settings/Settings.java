@@ -1,20 +1,20 @@
 package com.orderly.votybe.settings;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
+import com.orderly.votybe.core.BaseEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
 @Table(name = "settings")
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Settings {
+@Getter
+@Setter
+public class Settings extends BaseEntity {
 
     @Id
     @GeneratedValue

@@ -1,21 +1,20 @@
 package com.orderly.votybe.categories;
 
+import com.orderly.votybe.core.BaseEntity;
 import com.orderly.votybe.menus.Menu;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.UUID;
 
 @Entity
 @Table(name = "menu_categories")
-@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Category {
+@Getter
+@Setter
+public class Category extends BaseEntity {
 
     @Id
     @GeneratedValue
