@@ -30,7 +30,7 @@ public class ItemMapper {
                 .glutenFree(item.isGlutenFree())
                 .spicy(item.isSpicy())
                 .isNew(item.isNew())
-                .categoryId(item.getCategory().getId())
+                .categoryId(item.getCategory() != null ? item.getCategory().getId() : null)
                 .build();
     }
 }

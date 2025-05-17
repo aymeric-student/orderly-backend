@@ -12,9 +12,6 @@ public class RestaurantMapper {
     }
 
     public static RestaurantDto toDto(Restaurant restaurant) {
-        if (restaurant == null) {
-            return null;
-        }
         return RestaurantDto.builder()
                 .restaurantId(restaurant.getId())
                 .name(restaurant.getName())

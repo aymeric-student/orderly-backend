@@ -5,17 +5,19 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
 @Data
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 public class RestaurantDto {
     private UUID restaurantId;
 
     @NotBlank(message = "Restaurant name cannot be blank")
-    @Size(max = 100, message = "Restaurant name cannot exceed 100 characters")
+    @Size(min = 2, max = 100, message = "Restaurant name cannot exceed 100 characters")
     private String name;
 
     @NotBlank(message = "Address cannot be blank")
