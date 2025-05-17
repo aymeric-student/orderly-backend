@@ -15,3 +15,7 @@ management:
     web:
       exposure:
         include: "*"
+
+jwt:
+  secret: mySecretKeyForOrderlyApplicationThatIsAtLeast256BitsLong
+  expiration: 86400
